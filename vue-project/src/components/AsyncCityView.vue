@@ -15,14 +15,14 @@
         <h1 class="text-4xl mb-2">{{ route.params.city }}</h1>
         <p class="text-sm mb-12">
           {{
-            new Date(weatherData.currentTime).toLocaleDateString("en-us", {
+            new Date(weatherData.currentTime).toLocaleDateString("en-gb", {
               weekday: "short",
               day: "2-digit",
               month: "long",
             })
           }}
           {{
-            new Date(weatherData.currentTime).toLocaleTimeString("en-us", {
+            new Date(weatherData.currentTime).toLocaleTimeString("en-gb", {
               timeStyle: "short",
             })
           }}

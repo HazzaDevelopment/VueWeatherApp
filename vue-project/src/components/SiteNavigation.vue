@@ -11,8 +11,8 @@
 
             <div class="flex gap-3 flex-1 justify-end">
                 <i class="fa-solid fa-circle-info text-xl hover:text-weather-secondary duration-150 cursor-pointer"
-                    @click="toggleModal"></i>
-                <i class="fa-solid fa-plus text-xl hover:text-weather-secondary duration-150 cursor-pointer"></i>
+                    @click="toggleModal"></i>                                                                                   
+                <i class="fa-solid fa-plus text-xl hover:text-weather-secondary duration-150 cursor-pointer" @click="addCity" v-if="route.query.preview"></i>
             </div>
 
             <BaseModal :modalActive="modalActive" @close-modal="toggleModal">
@@ -55,12 +55,45 @@
 
 <script setup>
 import { ref } from "vue";
-import { RouterLink } from "vue-router";
+import { uid } from "uid";
+import { RouterLink, useRoute, useRouter } from "vue-router";
 import BaseModal from "./BaseModal.vue";
+
+const savedCities = ref([]);
+const route = useRoute();
+const router = useRouter();
+const addCity = () => {
+    // Check if any saved city to local storage to retrieve and set
+    if (localStorage.getItem('savedCities')) {
+        // Parse is used to take data from local storage
+        savedCities.value = JSON.parse(localStorage.getItem('savedCities'))
+    }
+
+    const locationObj = {
+        // Uid method used to create uniquie ID for location 
+        id: uid(),
+        state: route.params.state,
+        city: route.params.city,
+        // Coords are found in query string
+        coords: {
+            lat: route.query.lat,
+            lng: route.query.lng,
+            
+        }
+    }
+    // Push the created object to savedCities and update local storage
+    savedCities.value.push(locationObj);
+    localStorage.setItem('savedCities', JSON.stringify(savedCities.value))
+    // Updates the query by removing the preview param
+    let query = Object.assign({}, route.query);
+    delete query.preview;
+    router.replace({ query })
+};
+
 
 const modalActive = ref(null);
 
 const toggleModal = () => {
     modalActive.value = !modalActive.value;
-}
+};
 </script>
