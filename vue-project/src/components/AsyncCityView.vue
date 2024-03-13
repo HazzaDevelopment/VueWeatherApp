@@ -13,6 +13,7 @@
       <!-- Display the main weather overview including the city name, date, temperature, and general weather description -->
       <div class="flex flex-col items-center text-white py-12">
         <h1 class="text-4xl mb-2">{{ route.params.city }}</h1>
+        <h2 class="text-1xl mb-2">{{ route.params.state }}</h2>
         <p class="text-sm mb-12">
           {{
             new Date(weatherData.currentTime).toLocaleDateString("en-gb", {
