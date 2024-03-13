@@ -25,23 +25,24 @@ A dynamic local weather application that provides real-time weather information,
 ### Installation
 
 ```bash
-npm install npm@latest -g` 
+npm install npm@latest -g
+``` 
 
 1.  Clone the VueWeatherApp repository:
-
+```bash
 git clone https://github.com/HazzaDevelopment/VueWeatherApp.git
-
+```
 2.  Navigate to the VueWeatherApp directory:
-
+```bash
 cd /vue-project
-
+```
 3.  Install required packages:
-
+```bash
 npm i axios
 npm install 
-
+```
 4.  Run the application locally:
-
+```bash
 npm run dev 
 ```
 
