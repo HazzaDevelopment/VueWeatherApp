@@ -23,27 +23,27 @@ A dynamic local weather application that provides real-time weather information,
 - npm (Node Package Manager). Install npm with the following command:
 
 ### Installation
-
+1.  Install the latest version of npm:
 ```bash
 npm install npm@latest -g
 ``` 
 
-1.  Clone the dynamic-weather-app repository:
+2.  Clone the dynamic-weather-app repository:
 ```bash
 git clone https://github.com/HazzaDevelopment/dynamic-weather-app.git
 ```
-2.  Navigate to the dynamic-weather-app directory:
+3.  Navigate to the dynamic-weather-app directory:
 ```bash
 cd /vue-project
 ```
-3.  Install required packages:
+4.  Install required packages:
 ```bash
 npm i axios
 ```
 ```bash
 npm install 
 ```
-4.  Run the application locally:
+5.  Run the application locally:
 ```bash
 npm run dev 
 ```
