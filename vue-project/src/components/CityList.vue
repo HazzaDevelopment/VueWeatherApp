@@ -2,7 +2,6 @@
     <div v-for="city in savedCities" :key="city.id">
       <CityCard :city="city" @click="goToCityView(city)" />
     </div>
-  
     <p v-if="savedCities.length === 0">
       No locations added. To start tracking a location, search in
       the field above.
@@ -43,9 +42,14 @@
   const router = useRouter();
   const goToCityView = (city) => {
     router.push({
-      name: "cityView",
-      params: { state: city.state, city: city.city },
+      name: "CityView",
+      params: { 
+        state: city.state, 
+        city: city.city 
+      },
+
       query: {
+        id: city.id,
         lat: city.coords.lat,
         lng: city.coords.lng,
       },

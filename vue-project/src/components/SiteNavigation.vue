@@ -83,9 +83,11 @@ const addCity = () => {
     // Push the created object to savedCities and update local storage
     savedCities.value.push(locationObj);
     localStorage.setItem('savedCities', JSON.stringify(savedCities.value))
+   
     // Updates the query by removing the preview param
     let query = Object.assign({}, route.query);
     delete query.preview;
+    query.id = locationObj.id;
     router.replace({ query })
 };
 
