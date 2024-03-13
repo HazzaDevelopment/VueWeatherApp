@@ -1,4 +1,4 @@
-## Dynamic Vue Weather App
+## Dynamic Vue.js Weather App
 A dynamic local weather application that provides real-time weather information, a 7-day forecast for cities globally, and the ability to save cities to a list for quick future access. Built with Vue.js and styled using Tailwind.css, it offers a sleek, responsive user interface that adjusts smoothly across different devices. Utilizing OpenWeather for weather data and Mapbox for location services, VueWeatherApp delivers accurate weather updates and forecasts.
 
 ## Features
