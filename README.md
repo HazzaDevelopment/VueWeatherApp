@@ -22,26 +22,27 @@ A dynamic local weather application that provides real-time weather information,
 
 - npm (Node Package Manager). Install npm with the following command:
 
+### Installation
+
 ```bash
 npm install npm@latest -g` 
 
-### Installation
-
 1.  Clone the VueWeatherApp repository:
 
-`git clone https://github.com/HazzaDevelopment/VueWeatherApp.git` 
+git clone https://github.com/HazzaDevelopment/VueWeatherApp.git
 
 2.  Navigate to the VueWeatherApp directory:
 
-`cd /vue-project` 
+cd /vue-project
 
 3.  Install required packages:
 
-`npm install` 
+npm i axios
+npm install 
 
 4.  Run the application locally:
 
-`npm run dev` 
+npm run dev 
 ```
 
 ## Usage
