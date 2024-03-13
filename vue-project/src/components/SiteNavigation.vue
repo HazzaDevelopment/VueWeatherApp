@@ -68,7 +68,6 @@ const addCity = () => {
         // Parse is used to take data from local storage
         savedCities.value = JSON.parse(localStorage.getItem('savedCities'))
     }
-
     const locationObj = {
         // Uid method used to create uniquie ID for location 
         id: uid(),
