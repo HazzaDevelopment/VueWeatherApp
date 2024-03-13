@@ -46,10 +46,10 @@ import CityList from "../components/CityList.vue";
 // Function to navigate to city preview
 const router = useRouter();
 const previewCity = (searchResult) => {
-  const [city, state] = searchResult.place_name.split(",");
+  const [city, state] = searchResult.place_name.split(",").map(s => s.trim());
   router.push({
     name: "CityView",
-    params: { state: state.replaceAll(" ", ""), city: city },
+    params: { state: state.replaceAll(" ", "-"), city: city },
     query: {
       lat: searchResult.geometry.coordinates[1],
       lng: searchResult.geometry.coordinates[0],
