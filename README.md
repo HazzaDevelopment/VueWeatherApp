@@ -18,12 +18,8 @@ A dynamic local weather application that provides real-time weather information,
 
 ## Getting Started
 
-### Prerequisites
-
-- npm (Node Package Manager). Install npm with the following command:
-
 ### Installation
-1.  Install the latest version of npm:
+1.  Install npm (Node Package Manager) with the following command:
 ```bash
 npm install npm@latest -g
 ``` 
