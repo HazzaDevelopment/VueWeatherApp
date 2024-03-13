@@ -5,9 +5,11 @@
             <!-- Logo and application name with link to home -->
             <RouterLink :to="{ name: 'home' }">
                 <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-sun text-2xl"></i>
+                    <img src="/favicon.png" alt="Sun">
+                    <!-- Adjust the width and height as needed -->
                     <p class="text-2xl">The Local Weather</p>
                 </div>
+
             </RouterLink>
 
             <!-- Info and add city icons -->
