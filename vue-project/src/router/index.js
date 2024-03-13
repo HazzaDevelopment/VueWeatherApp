@@ -15,7 +15,7 @@ const router = createRouter({
       },
     },
     {
-      path: "/weather/:state/:city", // Dynamic route for weather by state and city
+      path: "/weather/:state/:city/", // Dynamic route for weather by state and city
       name: "CityView",
       component: CityView, // Component to render for this route
       meta: {
