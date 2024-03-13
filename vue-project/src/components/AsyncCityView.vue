@@ -51,7 +51,7 @@
       <div class="max-w-screen-md w-full py-12">
         <div class="mx-8 text-white">
           <h2 class="mb-4">Hourly Weather</h2>
-          <div class="flex gap-10 overflow-x-scroll">
+          <div class="flex py-5 gap-10 overflow-x-scroll custom-scrollbar">
             <div
               v-for="hourData in weatherData.hourly"
               :key="hourData.dt"
@@ -167,3 +167,10 @@ const removeCity = () => {
   });
 };
 </script>
+
+<style>
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #f0f0f0 #2E4374;
+}
+</style>

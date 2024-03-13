@@ -8,8 +8,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        "weather-primary": "#00668A",
-        "weather-secondary": "#004E71",
+        "weather-primary": "#4B527E",
+        "weather-secondary": "#2E4374",
       },
     },
 
