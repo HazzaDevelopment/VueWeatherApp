@@ -1,6 +1,6 @@
 <template>
     <!-- Sticky header with navigation -->
-    <header class="sticky top-0 bg-weather-primary shadow-xl">
+    <header class="sticky top-0 bg-weather-secondary shadow-xl">
         <nav class="container flex flex-col sm:flex-row items-center gap-4 text-white py-6">
             <!-- Logo and application name with link to home -->
             <RouterLink :to="{ name: 'home' }">
